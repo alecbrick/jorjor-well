@@ -24,7 +24,7 @@ def main():
         
 
     #client.run(DISCORD_TOKEN)
-    client.run('REDACTED')
+    client.run('Nzk0MzcyNjE3MjA1MzE3NjYy.X-53Jg.nezvCHWH07zeGYTV4PREKphCZsU')
         
 if __name__ == '__main__':
     main()
