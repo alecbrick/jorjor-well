@@ -102,7 +102,7 @@ class MiscCog(commands.Cog, name="Misc"):
         embed.add_field(
             name=f"About Me!",
             value=f"Hello!\n"
-            f"Bot Be Named is a discord bot that we use while solving Puzzle Hunts.\n"
+            f"Jorjor Well is a discord bot that we use while solving Puzzle Hunts.\n"
             f"The bot has a few channel management functions, some puzzle-hunt utility functions, "
             f"as well as Google-Sheets interactivity.\n"
             f"You can make channels as well as tabs on your Sheet, and other similar QoL upgrades to your puzzlehunting setup.\n\n"
