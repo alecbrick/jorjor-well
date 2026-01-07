@@ -1,14 +1,24 @@
-# fly.toml app configuration file generated for bot-be-named-billowing-fog-6159 on 2024-07-17T05:18:38+05:30
+# fly.toml app configuration file generated for jorjor-well on 2026-01-06T08:23:20Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = 'jorjor-well'
-primary_region = 'ams'
+primary_region = 'sjc'
 
-[[services]]
+[build]
+
+[http_service]
   internal_port = 8080
-  protocol = "tcp"
+  force_https = true
+  auto_stop_machines = false # prevent automatic suspension
   auto_start_machines = true
-  auto_stop_machines = false  # prevent automatic suspension
   min_machines_running = 1  # keep a machine running at all times
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 1024
+
