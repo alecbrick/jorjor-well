@@ -254,7 +254,7 @@ class LionCog(commands.Cog, name="Puzzles"):
         await logging_utils.log_command(
             "solve", ctx.guild, ctx.channel, ctx.author
         )
-        await self.statuslion(ctx, "solved", answer)
+        await self.setstatus(ctx, "solved", answer)
 
     @command_predicates.is_solver()
     @commands.command(name="backsolve", aliases=["backsolved", "backsolvedlion"])
@@ -268,7 +268,7 @@ class LionCog(commands.Cog, name="Puzzles"):
         await logging_utils.log_command(
             "backsolve", ctx.guild, ctx.channel, ctx.author
         )
-        await self.statuslion(ctx, "backsolved", answer)
+        await self.setstatus(ctx, "backsolved", answer)
 
     @command_predicates.is_solver()
     @commands.command(name="solveish")
@@ -282,7 +282,7 @@ class LionCog(commands.Cog, name="Puzzles"):
         await logging_utils.log_command(
             "solveish", ctx.guild, ctx.channel, ctx.author
         )
-        await self.statuslion(ctx, "solvedish", answer)
+        await self.setstatus(ctx, "solvedish", answer)
 
     @command_predicates.is_solver()
     @commands.command(name="unsolve")
@@ -295,7 +295,7 @@ class LionCog(commands.Cog, name="Puzzles"):
         await logging_utils.log_command(
             "unsolve", ctx.guild, ctx.channel, ctx.author
         )
-        await self.statuslion(ctx, "in progress", answer)
+        await self.setstatus(ctx, "in progress", answer)
 
     @command_predicates.is_solver()
     @commands.command(name="setstatus", aliases=["status"])
