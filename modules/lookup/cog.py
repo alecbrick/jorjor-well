@@ -85,7 +85,7 @@ class LookupCog(commands.Cog, name="Lookup"):
             )
         await ctx.send(embed=embed)
 
-    @commands.command(name="google")
+    # @commands.command(name="google")
     async def google(self, ctx, *args):
         """
         Command to search google!
@@ -102,7 +102,7 @@ class LookupCog(commands.Cog, name="Lookup"):
         )
         await ctx.send(embed=embed)
 
-    @commands.command(name="wikipedia", aliases=["wiki"])
+    # @commands.command(name="wikipedia", aliases=["wiki"])
     async def wikipedia(self, ctx, *args):
         """
         Command to search Wikipedia!
