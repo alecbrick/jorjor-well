@@ -192,6 +192,8 @@ async def chancrabgeneric(
     msg = None
     try:
         msg = await new_chan.send(embed=embed)
+        # TODO(alec) don't hardcode it
+        await new_chan.send("<@&1424452794131284121>")
     except nextcord.Forbidden:
         embed.add_field(
             name=f"{constants.FAILED}!",
