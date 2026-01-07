@@ -65,8 +65,13 @@ class HelpCommand(commands.MinimalHelpCommand):
         """implements group help page and command help page"""
         embed = discord_utils.create_embed()
         embed.title = group.qualified_name
+        description = ""
+        if group.aliases:
+            description += "Aliases: " + ", ".join(group.aliases) + "\n\n"
         if group.help:
-            embed.description = group.help
+            description += group.help
+        if description:
+            embed.description = description
 
         if isinstance(group, commands.Group):
             filtered = await self.filter_commands(group.commands, sort=True)
